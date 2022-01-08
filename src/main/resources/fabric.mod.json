@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "hallocoins",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Hallo Coins",
+  "description": "Adds a new currency to the game, while providing useful trading functions and gui :D",
   "authors": [
-    "Me!"
+    "nianny"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "",
+    "sources": ""
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/hallocoins/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "nianny.hallo.coins.HalloCoins"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "hallocoins.mixins.json"
   ],
 
   "depends": {
