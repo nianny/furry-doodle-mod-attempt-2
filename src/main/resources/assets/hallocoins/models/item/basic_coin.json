@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "nianny:item/basic_coin"
+    "layer0": "hallocoins:item/basic_coin"
   }
 }
