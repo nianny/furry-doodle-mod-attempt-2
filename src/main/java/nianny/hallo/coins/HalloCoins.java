@@ -25,7 +25,7 @@ public class HalloCoins implements ModInitializer {
 		.build();
 	
 	// Create item objects
-	public static final Item BASIC_COIN = new Item(new Item.Settings().group(HALLOCOIN_GROUP);
+	public static final Item BASIC_COIN = new Item(new Item.Settings().group(HALLOCOIN_GROUP));
 	
 	
 
