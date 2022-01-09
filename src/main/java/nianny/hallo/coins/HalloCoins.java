@@ -20,6 +20,8 @@ public class HalloCoins implements ModInitializer {
 	// Custom item group (seems appropriate)
 	// FIXME: illegal forward reference
 	// translation key: "itemGroup.hallocoins.general"
+	// P.S. this SO post is as old as Minecraft
+	// https://stackoverflow.com/questions/1746758/illegal-forward-reference-in-java
 	public static final ItemGroup HALLOCOIN_GROUP = FabricItemGroup.create(new Identifier("hallocoins", "general"))
 		.icon(() -> new ItemStack(BASIC_COIN))
 		.appendItems(stacks -> { stacks.add(BASIC_COIN); }) 
