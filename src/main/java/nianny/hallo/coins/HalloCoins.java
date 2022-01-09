@@ -20,10 +20,10 @@ public class HalloCoins implements ModInitializer {
 	public static final Item BASIC_COIN = new Item(new Item.Settings().group(null)); //Set to null for now. During ItemGroup registration it will be added into the group.
 	
 	// Custom item group (seems appropriate)
-	public static final ItemGroup HALLOCOIN_GROUP = FabricItemGroup.create(
+	public static final ItemGroup HALLOCOIN_GROUP = FabricItemGroupBuilder.create(
 		new Identifier("hallocoins", "general")) // translation key for group name (full translation key: itemGroup.hallocoins.general)
-		.icon(() -> new ItemStack(BASIC_COIN)) // FIXME: may break
-		.appendItens(stacks -> { stacks.add(BASIC_COIN); }) // FIXME: ^ see above comment
+		.icon(() -> new ItemStack(BASIC_COIN))
+		.appendItems(stacks -> { stacks.add(new ItemStack(BASIC_COIN)); })
 		.build();
 	
 
