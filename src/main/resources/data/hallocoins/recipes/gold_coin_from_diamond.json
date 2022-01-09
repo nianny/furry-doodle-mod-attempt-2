@@ -1,15 +1,10 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "pattern": [
-    "W  ",
-    "   ",
-    "   "
-  ],
-  "key": {
-    "W": {
+  "ingredients": [
+    {
       "item": "hallocoins:diamond_coin"
     }
-  },
+  ],
   "result": {
     "item": "hallocoins:gold_coin",
     "count": 9
