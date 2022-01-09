@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W  ",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "W": {
+      "item": "hallocoins:silver_coin"
+    }
+  },
+  "result": {
+    "item": "hallocoins:basic_coin",
+    "count": 9
+  }
+}
