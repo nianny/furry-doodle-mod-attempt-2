@@ -18,10 +18,11 @@ public class HalloCoins implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger("hallocoins");
 	
 	// Custom item group (seems appropriate)
-	public static final ItemGroup HALLOCOIN_GROUP = FabricItemGroup.create(
-		new Identifier("hallocoins", "general")) // translation key for group name (full translation key: itemGroup.hallocoins.general)
-		.icon(() -> new ItemStack(BASIC_COIN)) // FIXME: may break
-		.appendItens(stacks -> { stacks.add(BASIC_COIN); }) // FIXME: ^ see above comment
+	// FIXME: illegal forward reference
+	// translation key: "itemGroup.hallocoins.general"
+	public static final ItemGroup HALLOCOIN_GROUP = FabricItemGroup.create(new Identifier("hallocoins", "general"))
+		.icon(() -> new ItemStack(BASIC_COIN))
+		.appendItems(stacks -> { stacks.add(BASIC_COIN); }) 
 		.build();
 	
 	// Create item objects
@@ -32,7 +33,7 @@ public class HalloCoins implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
-		LOGGER.info("HalloCoin is initialising!");
+		LOGGER.info("HalloCoin is initialising! Have fun!");
 		
 		
 		// Register HalloCoin
