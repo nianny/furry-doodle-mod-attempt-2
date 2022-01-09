@@ -16,6 +16,8 @@ public class HalloCoins implements ModInitializer {
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LogManager.getLogger("hallocoins");
+	// Create item objects
+	public static final Item BASIC_COIN = new Item(new Item.Settings().group(null)); //Set to null for now. During ItemGroup registration it will be added into the group.
 	
 	// Custom item group (seems appropriate)
 	public static final ItemGroup HALLOCOIN_GROUP = FabricItemGroup.create(
@@ -24,8 +26,7 @@ public class HalloCoins implements ModInitializer {
 		.appendItens(stacks -> { stacks.add(BASIC_COIN); }) // FIXME: ^ see above comment
 		.build();
 	
-	// Create item objects
-	public static final Item BASIC_COIN = new Item(new Item.Settings().group(HALLOCOIN_GROUP));
+
 	
 	
 
