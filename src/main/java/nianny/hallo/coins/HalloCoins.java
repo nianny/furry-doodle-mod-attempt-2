@@ -17,18 +17,18 @@ public class HalloCoins implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LogManager.getLogger("hallocoins");
 	
+	// Create item objects
+	public static final Item BASIC_COIN = new Item(new Item.Settings().group(HALLOCOIN_GROUP));
+	
 	// Custom item group (seems appropriate)
 	// FIXME: illegal forward reference
 	// translation key: "itemGroup.hallocoins.general"
 	// P.S. this SO post is as old as Minecraft
 	// https://stackoverflow.com/questions/1746758/illegal-forward-reference-in-java
-	public static final ItemGroup HALLOCOIN_GROUP = FabricItemGroupBuilder.create(new Identifier("hallocoins", "general"))
+	public static ItemGroup HALLOCOIN_GROUP = FabricItemGroupBuilder.create(new Identifier("hallocoins", "general"))
 		.icon(() -> new ItemStack(BASIC_COIN))
 		.appendItems(stacks -> { stacks.add(BASIC_COIN); }) 
 		.build();
-	
-	// Create item objects
-	public static final Item BASIC_COIN = new Item(new Item.Settings().group(HALLOCOIN_GROUP));
 	
 	
 
