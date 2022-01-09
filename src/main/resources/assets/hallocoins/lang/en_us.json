@@ -1,5 +1,8 @@
 {
-     "item.hallocoin.basic_coin":"Basic Coin",
-     "itemGroup.hallocoin.general":"Hallo Coins"
+     "item.hallocoins.basic_coin":"Basic Coin",
+     "item.hallocoins.silver_coin":"Silver Coin",
+     "item.hallocoins.gold_coin":"Gold Coin",
+     "item.hallocoins.diamond_coin":"Diamond Coin",
+     "itemGroup.hallocoins.general":"Hallo Coins"
 
 }

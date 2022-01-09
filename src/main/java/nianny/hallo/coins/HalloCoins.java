@@ -18,12 +18,19 @@ public class HalloCoins implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger("hallocoins");
 	// Create item objects
 	public static final Item BASIC_COIN = new Item(new Item.Settings().group(null)); //Set to null for now. During ItemGroup registration it will be added into the group.
-	
+	public static final Item SILVER_COIN = new Item(new Item.Settings().group(null));
+	public static final Item GOLD_COIN = new Item(new Item.Settings().group(null));
+	public static final Item DIAMOND_COIN = new Item(new Item.Settings().group(null));
 	// Custom item group (seems appropriate)
 	public static final ItemGroup HALLOCOIN_GROUP = FabricItemGroupBuilder.create(
 		new Identifier("hallocoins", "general")) // translation key for group name (full translation key: itemGroup.hallocoins.general)
-		.icon(() -> new ItemStack(BASIC_COIN))
-		.appendItems(stacks -> { stacks.add(new ItemStack(BASIC_COIN)); })
+		.icon(() -> new ItemStack(GOLD_COIN))
+		.appendItems(stacks -> {
+			stacks.add(new ItemStack(BASIC_COIN));
+			stacks.add(new ItemStack(SILVER_COIN));
+			stacks.add(new ItemStack(GOLD_COIN));
+			stacks.add(new ItemStack(DIAMOND_COIN));
+		})
 		.build();
 	
 
@@ -38,6 +45,9 @@ public class HalloCoins implements ModInitializer {
 		
 		// Register HalloCoin
 		Registry.register(Registry.ITEM, new Identifier("hallocoins", "basic_coin"), BASIC_COIN);
+		Registry.register(Registry.ITEM, new Identifier("hallocoins", "silver_coin"), SILVER_COIN);
+		Registry.register(Registry.ITEM, new Identifier("hallocoins", "gold_coin"), GOLD_COIN);
+		Registry.register(Registry.ITEM, new Identifier("hallocoins", "diamond_coin"), DIAMOND_COIN);
 
 
 	}
