@@ -18,16 +18,22 @@ public class HalloCoins implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger("hallocoins");
 	
 	// Create item objects
-	public static final Item BASIC_COIN = new Item(new Item.Settings().group(HALLOCOIN_GROUP));
+	public static Item BASIC_COIN; // we're literally trading one error for another
 	
 	// Custom item group (seems appropriate)
-	// FIXME: illegal forward reference
 	// translation key: "itemGroup.hallocoins.general"
 	// P.S. this SO post is as old as Minecraft
 	// https://stackoverflow.com/questions/1746758/illegal-forward-reference-in-java
 	public static ItemGroup HALLOCOIN_GROUP = FabricItemGroupBuilder.create(new Identifier("hallocoins", "general"))
 		.icon(() -> new ItemStack(BASIC_COIN))
-		.appendItems(stacks -> { stacks.add(BASIC_COIN); }) 
+		.appendItems((stacks, itemGroup) -> {
+			for ( Item item : Registry.ITEM ) { 
+				// For each item in registry,
+				// if the item's group is 
+				if ( item.getGroup() == itemGroup ) stacks.add( new ItemGroup(item) );
+			}
+			// I apologise for the style
+		}) 
 		.build();
 	
 	
@@ -37,10 +43,11 @@ public class HalloCoins implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("HalloCoin is initialising! Have fun!");
 		
-		
 		// Register HalloCoin
-		Registry.register(Registry.ITEM, new Identifier("hallocoins", "basic_coin"), BASIC_COIN);
-
+		// See
+		// https://github.com/FabricMC/fabric/blob/1.18/fabric-item-groups-v0/src/testmod/java/net/fabricmc/fabric/test/item/group/ItemGroupTest.java
+		// for why i did this
+		BASIC_COIN = Registry.register(Registry.ITEM, new Identifier("hallocoins", "basic_coin"), new Item(new Item.Settings().group(HALLOCOIN_GROUP)));
 
 	}
 }
