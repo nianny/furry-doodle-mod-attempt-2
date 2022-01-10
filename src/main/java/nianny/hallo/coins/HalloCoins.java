@@ -23,6 +23,7 @@ public class HalloCoins implements ModInitializer {
 	public static final Item SILVER_COIN = new Item(new Item.Settings().group(null));
 	public static final Item GOLD_COIN = new Item(new Item.Settings().group(null));
 	public static final Item DIAMOND_COIN = new Item(new Item.Settings().group(null));
+	public static final Item SILVER_INGOT = new Item(new Item.Settings().group(ItemGroup.MISC));
 	
 	// Custom item grop
 	public static final ItemGroup HALLOCOIN_GROUP = FabricItemGroupBuilder.create(
