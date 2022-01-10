@@ -16,12 +16,15 @@ public class HalloCoins implements ModInitializer {
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LogManager.getLogger("hallocoins");
+	
 	// Create item objects
-	public static final Item BASIC_COIN = new Item(new Item.Settings().group(null)); //Set to null for now. During ItemGroup registration it will be added into the group.
+	// NOTE: Group is set to null to prevent illegal forward referrences.
+	public static final Item BASIC_COIN = new Item(new Item.Settings().group(null)); 
 	public static final Item SILVER_COIN = new Item(new Item.Settings().group(null));
 	public static final Item GOLD_COIN = new Item(new Item.Settings().group(null));
 	public static final Item DIAMOND_COIN = new Item(new Item.Settings().group(null));
-	// Custom item group (seems appropriate)
+	
+	// Custom item grop
 	public static final ItemGroup HALLOCOIN_GROUP = FabricItemGroupBuilder.create(
 		new Identifier("hallocoins", "general")) // translation key for group name (full translation key: itemGroup.hallocoins.general)
 		.icon(() -> new ItemStack(GOLD_COIN))
@@ -42,8 +45,7 @@ public class HalloCoins implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("HalloCoin is initialising!");
 		
-		
-		// Register HalloCoin
+		// Register HalloCoins
 		Registry.register(Registry.ITEM, new Identifier("hallocoins", "basic_coin"), BASIC_COIN);
 		Registry.register(Registry.ITEM, new Identifier("hallocoins", "silver_coin"), SILVER_COIN);
 		Registry.register(Registry.ITEM, new Identifier("hallocoins", "gold_coin"), GOLD_COIN);
