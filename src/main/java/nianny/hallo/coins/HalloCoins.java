@@ -46,11 +46,14 @@ public class HalloCoins implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("HalloCoin is initialising!");
 		
+		
 		// Register HalloCoins
 		Registry.register(Registry.ITEM, new Identifier("hallocoins", "basic_coin"), BASIC_COIN);
 		Registry.register(Registry.ITEM, new Identifier("hallocoins", "silver_coin"), SILVER_COIN);
 		Registry.register(Registry.ITEM, new Identifier("hallocoins", "gold_coin"), GOLD_COIN);
 		Registry.register(Registry.ITEM, new Identifier("hallocoins", "diamond_coin"), DIAMOND_COIN);
+		
+		Registry.register(Registry.ITEM, new Identifier("hallocoins", "silver_ingot"), SILVER_INGOT);
 
 
 	}
