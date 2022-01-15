@@ -3,6 +3,6 @@
      "item.hallocoins.silver_coin":"Silver Coin",
      "item.hallocoins.gold_coin":"Gold Coin",
      "item.hallocoins.diamond_coin":"Diamond Coin",
-     "itemGroup.hallocoins.general":"Hallo Coins"
-
+     "itemGroup.hallocoins.general":"Hallo Coins",
+     "commands.withdrawal.failed": "You are too broke for this transaction! :("
 }
