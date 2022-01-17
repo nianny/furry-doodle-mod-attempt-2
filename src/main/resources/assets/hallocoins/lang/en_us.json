@@ -4,5 +4,8 @@
      "item.hallocoins.gold_coin":"Gold Coin",
      "item.hallocoins.diamond_coin":"Diamond Coin",
      "itemGroup.hallocoins.general":"Hallo Coins",
-     "commands.withdrawal.failed": "You are too broke for this transaction! :("
+     "commands.withdrawal.failed": "You are too broke for this transaction! :(",
+     "text.hallocoins.balance": "You currently have %d coins in your bank!",
+     "category.hallocoins.hallocoins": "HalloCoins Settings",
+     "key.hallocoins.checkbalance": "Check Balance in Bank"
 }

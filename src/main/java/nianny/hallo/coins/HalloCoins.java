@@ -55,6 +55,6 @@ public class HalloCoins implements ModInitializer {
 		CommandRegistration.registerCommands();
 
 	}
-	//TODO: add GUI to display how much u have in balance
+	//TODO: make a todo to do
 
 }
