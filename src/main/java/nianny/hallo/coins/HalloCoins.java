@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.UUID;
 
 public class HalloCoins implements ModInitializer {
-	public static final Logger LOGGER = LogManager.getLogger("hallocoins"(;
+	public static final Logger LOGGER = LogManager.getLogger("hallocoins");
 	
 	
 	public static Map<UUID, Integer> mp = new HashMap<>(); //map each player to their balance
