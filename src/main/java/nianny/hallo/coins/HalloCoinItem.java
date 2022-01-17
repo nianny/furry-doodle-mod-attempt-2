@@ -10,7 +10,7 @@ import java.util.*;
 @YeetBot3276:
 This is Java, not C#, so could we please stick to default Java formatting?
 e.g. lowercase method names pls
-also PLEASE leave spaces where appropriate and not compress everything, it makes it WAY more readable.
+also could you leave spaces where appropriate and not compress everything? it makes the code WAY more readable
 (NOTE: You don't have do do it if you really don't want to)
 Thanks!
 - @AV306
