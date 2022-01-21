@@ -16,6 +16,7 @@ public class BalanceKeyBind implements ClientModInitializer {
             GLFW.GLFW_KEY_B,
             "category.hallocoins.hallocoins"
     ));
+    
     @Override
     public void onInitializeClient() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {

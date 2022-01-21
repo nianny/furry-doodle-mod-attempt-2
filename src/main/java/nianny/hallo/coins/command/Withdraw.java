@@ -32,7 +32,7 @@ public class Withdraw {
         if(HalloCoins.mp.get(player.getUuid()) < value ){
             throw FAILED_EXCEPTION.create();
         }else{
-            Map<String,Integer> mp = HalloCoinItem.Withdraw(player,value);
+            Map<String,Integer> mp = HalloCoinItem.withdraw(player,value);
             for(var m:mp.entrySet()){
                 if(HalloCoins.convert.containsKey(m.getKey())){
                     player.giveItemStack(new ItemStack(HalloCoins.convert.get(m.getKey()),m.getValue()));

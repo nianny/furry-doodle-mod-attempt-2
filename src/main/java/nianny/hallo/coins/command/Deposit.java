@@ -16,6 +16,7 @@ public class Deposit {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher, boolean dedicated){
         dispatcher.register(CommandManager.literal("deposit").executes(Deposit::run));
     }
+
     public static int run(CommandContext<ServerCommandSource> context) throws CommandSyntaxException{
         PlayerEntity player = context.getSource().getPlayer();
         if(!HalloCoins.mp.containsKey(player.getUuid())) throw new AssertionError("UUID not found!!!");
@@ -26,7 +27,7 @@ public class Deposit {
             context.getSource().sendError(new LiteralText("You need to hold hallocoins on your main hand to run this command!"));
             return -1;
         }
-        HalloCoinItem.Deposit(item, t, player);
+        HalloCoinItem.deposit(item, t, player);
         player.getMainHandStack().decrement(itemSt.getCount());
         context.getSource().sendFeedback(new LiteralText("Successfully deposited the hallocoins into your bank!! :D"),false);
         return 1;

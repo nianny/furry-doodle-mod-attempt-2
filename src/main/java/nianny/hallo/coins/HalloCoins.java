@@ -55,6 +55,6 @@ public class HalloCoins implements ModInitializer {
 		CommandRegistration.registerCommands();
 
 	}
-	//TODO: make a todo to do
+	//TODO:make hallocoin obtainable
 
 }
