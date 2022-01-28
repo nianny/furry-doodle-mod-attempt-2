@@ -10,7 +10,7 @@ import nianny.hallo.coins.gui.HalloScreen;
 import org.lwjgl.glfw.GLFW;
 
 public class BalanceKeyBind implements ClientModInitializer {
-    private static KeyBinding checkBal = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+    public static KeyBinding checkBal = KeyBindingHelper.registerKeyBinding(new KeyBinding(
             "key.hallocoins.checkbalance",
             InputUtil.Type.KEYSYM,
             GLFW.GLFW_KEY_B,
