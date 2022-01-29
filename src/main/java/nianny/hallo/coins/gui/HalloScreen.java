@@ -11,7 +11,9 @@ public class HalloScreen extends CottonClientScreen {
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         if(BalanceKeyBind.checkBal.matchesKey(keyCode, scanCode)){
-            client.setScreen(null);
+            if (client != null) {
+                client.setScreen(null);
+            }
             return true;
         }
         return false;

@@ -67,5 +67,17 @@ public class HalloCoinItem extends Item {
             throw new AssertionError("That was NOT supposed to happen skem...");
         }
 
-    }}
+    }
+
+    public static void transfer(PlayerEntity a, PlayerEntity b, int amount){
+        int bal1 = HalloCoins.mp.get(a.getUuid());
+        int bal2 = HalloCoins.mp.get(b.getUuid());
+        try{
+            HalloCoins.mp.replace(a.getUuid(), bal1, bal1 - amount);
+            HalloCoins.mp.replace(b.getUuid(), bal2, bal2 - amount);
+        }catch(Exception e){
+            throw new AssertionError("onooo");
+        }
+    }
+}
 
