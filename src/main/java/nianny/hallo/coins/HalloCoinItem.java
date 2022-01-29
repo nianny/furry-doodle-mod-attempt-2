@@ -74,7 +74,7 @@ public class HalloCoinItem extends Item {
         int bal2 = HalloCoins.mp.get(b.getUuid());
         try{
             HalloCoins.mp.replace(a.getUuid(), bal1, bal1 - amount);
-            HalloCoins.mp.replace(b.getUuid(), bal2, bal2 - amount);
+            HalloCoins.mp.replace(b.getUuid(), bal2, bal2 + amount);
         }catch(Exception e){
             throw new AssertionError("onooo");
         }
