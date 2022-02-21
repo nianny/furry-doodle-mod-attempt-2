@@ -15,11 +15,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class HalloCoins implements ModInitializer {
+public class HalloCoins implements ModInitializer { // TODO: Make enum so we don't have to use static stuff (avoids context issues)
 	public static final Logger LOGGER = LogManager.getLogger("hallocoins");
 	
+	private boolean debug = false;
+	// this won't compile, is why we use enum (can access fields and stuff without instance)
+	//public boolean isDebug() { return this.debug }; 
 	
-	public static Map<UUID, Integer> mp = new HashMap<>(); //map each player to their balance
+	
+	public static Map<UUID, Integer> mp = new HashMap<>(); // Map each player to their balance @YeetBot why cast to Map? TODO: Refactor name (I'm on pld here)
 	public static Map<String, HalloCoinItem> convert= new HashMap<>(); //map string to corresponding item
 
 	// Create item objects
@@ -56,5 +60,10 @@ public class HalloCoins implements ModInitializer {
 
 	}
 	//TODO:make hallocoin obtainable
+	
+	public void debug_log( Object msg )
+	{
+		
+	}
 
 }
